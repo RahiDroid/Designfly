@@ -1,47 +1,60 @@
-[![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/Automattic/_s)
+# DesignFly
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Tan-007/DesignFly/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Tan-007/DesignFly/?branch=master)
 
-_s
-===
+A fully responsive and highly customizable WordPress theme. This theme was developed during the WordPress training program provided by [rtCamp](https://rtcamp.com/). Requirements for the theme were provided by rtCamp which can be found [here](https://learn.rtcamp.com/topic/task-theme-development-assignment/).
 
-Hi. I'm a starter theme called `_s`, or `underscores`, if you like. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
+- [For Developers](https://github.com/Tan-007/DesignFly#for-developers)
+- [For Users](https://github.com/Tan-007/DesignFly#for-users)
+- [Screenshot(s)](https://github.com/Tan-007/DesignFly#)
 
-My ultra-minimal CSS might make me look like theme tartare but that means less stuff to get in your way when you're designing your awesome theme. Here are some of the other more interesting things you'll find here:
+## For developers: 
+### Here are the main directories/files:
+- `assets`: contains images used by the site
+- `inc`: contains files for the theme customizer, template-tags(functions) and widgets.php file(contains custom widget class)
+- `js`: contains theme scripts
+- `languages`: contains pot template for localization
+- `layouts`: contains styles for the theme
+  - `css/main.css`(file): **contains all the core theme css**
+  - `css/media-queries.css`(file): contains media queries for the theme
+- `lib`: contains all the third party libraries/plugins
+- `page-templates`: contains page templates provided by the theme
+- `template-parts`: conains template parts used by the theme
+- `home.php`: Your home page template
 
-* A just right amount of lean, well-commented, modern, HTML5 templates.
-* A helpful 404 template.
-* A custom header implementation in `inc/custom-header.php` just add the code snippet found in the comments of `inc/custom-header.php` to your `header.php` template.
-* Custom template tags in `inc/template-tags.php` that keep your templates clean and neat and prevent code duplication.
-* Some small tweaks in `inc/template-functions.php` that can improve your theming experience.
-* A script at `js/navigation.js` that makes your menu a toggled dropdown on small screens (like your phone), ready for CSS artistry. It's enqueued in `functions.php`.
-* 2 sample CSS layouts in `layouts/` for a sidebar on either side of your content.
-Note: `.no-sidebar` styles are not automatically loaded.
-* Smartly organized starter CSS in `style.css` that will help you to quickly get your design off the ground.
-* Full support for `WooCommerce plugin` integration with hooks in `inc/woocommerce.php`, styling override woocommerce.css with product gallery features (zoom, swipe, lightbox) enabled.
-* Licensed under GPLv2 or later. :) Use it to make something cool.
+### Thir party plugins or libraries: 
+The theme uses only one third party UI library called [Bootstrap](https://getbootstrap.com/)
 
-Getting Started
----------------
+## For users:
+### Activation: 
+This theme is not available on WordPress marketplace hence you will have to manually upload this theme to your website's directory.
+1. Click on `Clone or download` button at top right in this directory to download a zip file of this entire directory on your computer.
+2. From your FTP client or your cpanel go to your WordPress website's root directory and navigate to the `themes` folder at `wp-content`>`themes`
+3. Create a new folder named `designfly` inside `themes` folder and copy all content of the zip file that you downloaded from github
+4. Log in to your WordPress admin panel and navigate to `Appearance`>`theme`
+5. There should be a new theme available named `DesignFly`. Click on active to activate it. 
 
-If you want to keep it simple, head over to https://underscores.me and generate your `_s` based theme from there. You just input the name of the theme you want to create, click the "Generate" button, and you get your ready-to-awesomize starter theme.
+### Getting started with the theme:
+- The theme comes with three page templates for you to use, Home page, Portfolio page and Blog page
+- Make sure your home page is set to display dynamic posts to automatically setup the home page by the theme.
+- First thing you will want to do is setup your navigation bar if this is your very first theme.
+- Go to `pages` in your admin panel and add two new pages named `Blog` and `Portfolio`(you can name them anything you want)
+- Now in bottom right section in the page editor, select `Blog Page` and `Portfolio page` page templates for your pages respectively.
+- Now you can add these pages to your navigation menu from `Appearance`>`Menus`
+- Now you can start adding new portfolio items in `Portfolio` section in your admin panel and your blog page is already setup. All your posts will appear in that page.
 
-If you want to set things up manually, download `_s` from GitHub. The first thing you want to do is copy the `_s` directory and change the name to something else (like, say, `megatherium-is-awesome`), and then you'll need to do a five-step find and replace on the name in all the templates.
+### Customizations:
+- On home page you should see mainly four sections, Navigation bar(contains logo and menu), Services bar(shows three services provided), Header section(contains header image), Portfolio section(displays recent portfolio items), Footer section(contains contact and other info).
+- The Navigation bar's logo can be changed from `Appearance`>`Customize`>`Site Identity`
+- You can add all three of your services' title, description and image from `Appearance`>`Customize`>`Services Bar`
+- You can also choose to select if you want to display the header section and/or portfolio section on your homepage or not from `Appearance`>`Customize`>`Home Page Settings`
+- You can add your footer section information like your adderess, email, phone and your social media links from `Appearance`>`Customize`>`Footer Settings`
+- Number of posts displayed in the blog page can be managed through `Settings`>`Reading`>`Blog pages show at most`
+- You are also provided with a widget to display your recent portfolio items in your site
 
-1. Search for `'_s'` (inside single quotations) to capture the text domain.
-2. Search for `_s_` to capture all the function names.
-3. Search for `Text Domain: _s` in `style.css`.
-4. Search for <code>&nbsp;_s</code> (with a space before it) to capture DocBlocks.
-5. Search for `_s-` to capture prefixed handles.
+> **Note:** *In future updates you can expect many more customizations like fonts, background image, theme primary and secondary colors, portfolio grid customizations, site icon and more. Stay tuned!*
 
-OR
-
-1. Search for: `'_s'` and replace with: `'megatherium-is-awesome'`.
-2. Search for: `_s_` and replace with: `megatherium_is_awesome_`.
-3. Search for: `Text Domain: _s` and replace with: `Text Domain: megatherium-is-awesome` in `style.css`.
-4. Search for: <code>&nbsp;_s</code> and replace with: <code>&nbsp;Megatherium_is_Awesome</code>.
-5. Search for: `_s-` and replace with: `megatherium-is-awesome-`.
-
-Then, update the stylesheet header in `style.css`, the links in `footer.php` with your own information and rename `_s.pot` from `languages` folder to use the theme's slug. Next, update or delete this readme.
-
-Now you're ready to go! The next step is easy to say, but harder to do: make an awesome WordPress theme. :)
-
-Good luck!
+## Screenshot(s):
+![Home page](https://i.imgur.com/m1rwzHM.png)
+![Portfolio page](https://i.imgur.com/W3hpQZW.png)
+![blog page](https://i.imgur.com/AxtUXYm.png)
+![Single post page](https://i.imgur.com/f3vMMFy.png)
