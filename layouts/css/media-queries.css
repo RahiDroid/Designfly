@@ -7,13 +7,13 @@
 @media only screen and (max-width: 1142px) {
     #portfolio-wrapper,
     #portfolio-wrapper_home {
-        grid-template-columns: 300px 300px;
         -ms-grid-columns: 300px 300px;
+        grid-template-columns: 300px 300px;
     }
 
     #portfolio-widget-wrapper {
-        grid-template-columns: auto auto auto;
         -ms-grid-columns: auto auto auto;
+        grid-template-columns: auto auto auto;
     }
 
     #portfolio-wrapper_home .portfolio-wrapper_home-top {
@@ -56,16 +56,16 @@
 @media only screen and (max-width: 768px) {
     
     #portfolio-widget-wrapper {
-        grid-template-columns: auto auto auto auto;
         -ms-grid-columns: auto auto auto auto;
+        grid-template-columns: auto auto auto auto;
     }
 }
 
 @media only screen and (max-width: 752px) {
     #portfolio-wrapper,
     #portfolio-wrapper_home {
-        grid-template-columns: 300px;
         -ms-grid-columns: 300px;
+        grid-template-columns: 300px;
     }
 
     #portfolio-wrapper_home .portfolio-wrapper_home-top {

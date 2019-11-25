@@ -138,3 +138,13 @@
 	background-size: cover;
 	margin-right: 5px;
 }
+
+
+/********************************************************
+------------------- Search widget ---------------------
+********************************************************/
+.widget_search input[type="submit"] {
+	background-color: #222222;
+	color: #fff;
+	font-size: 0.9rem;
+}

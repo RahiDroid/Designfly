@@ -1,4 +1,12 @@
 <?php
+/**
+* Widget class for Custom widget
+*
+* extends WP_Widget WordPress class and overrides necessary functions
+* for necessary functionality of the widget
+*
+* @package DesignFly
+*/
 
 class Designfly_Portfolio_Widget extends WP_Widget {
 

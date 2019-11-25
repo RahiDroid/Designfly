@@ -25,35 +25,37 @@
 
 	$query = new WP_Query( $args );
 
-	if ( $query -> have_posts() ):
-		if ( get_theme_mod( 'designfly-home-display-portfolio', 'Yes' ) == 'Yes' ):
-	?>
-		<div id="portfolio-wrapper_home">
-		
-			<!-- top bar -->
-			<div class="portfolio-wrapper_home-top">
-				<p class="title"> <?php echo esc_html__( get_theme_mod( 'designfly-home-portfolio-title', 'd\'sign is the soul' ) ); ?> </p>
-				<a href=" <?php echo get_permalink( get_theme_mod( 'designfly-home-portfolio-btn', '#' ) ); ?>" id="portfolio-view-all">view all</a>
-				<hr />
-			</div>
-
-		<?php
-		while ( $query -> have_posts() ):
-			$query -> the_post();
-			get_template_part( 'template-parts/content', 'df-portfolio' );  
-		endwhile;
+	if ( get_theme_mod( 'designfly-home-display-portfolio', 'Yes' ) == 'Yes' ):
+		if ( $query -> have_posts() ):
 		?>
+			<div id="portfolio-wrapper_home">
+		
+				<!-- top bar -->
+				<div class="portfolio-wrapper_home-top">
+					<p class="title"> <?php echo esc_html__( get_theme_mod( 'designfly-home-portfolio-title', 'd\'sign is the soul' ) ); ?> </p>
+					<a href=" <?php echo get_permalink( get_theme_mod( 'designfly-home-portfolio-btn', '#' ) ); ?>" id="portfolio-view-all">view all</a>
+					<hr />
+				</div>
+
+				<?php
+				while ( $query -> have_posts() ):
+					$query -> the_post();
+					get_template_part( 'template-parts/content', 'df-portfolio' );  
+				endwhile;
+				?>
 			
 			</div>
 
 		<?php
-			endif;
 		else:
 		?>
-		<p>
-			<?php _e( 'Sorry, no portfolio items found.', 'textdomain' ); ?>
-		</p>
-	<?php
+		<div class="container">
+			<p>
+				<?php _e( 'Sorry, no portfolio items found. Please add some portfolio items in admin-dashboard>Portfolio', 'textdomain' ); ?>
+			</p>
+		</div>
+	<?php 
+		endif;
 	endif;
 	?>
 
