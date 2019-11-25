@@ -24,6 +24,8 @@ A fully responsive and highly customizable WordPress theme. This theme was devel
 ### Thir party plugins or libraries: 
 The theme uses only one third party UI library called [Bootstrap](https://getbootstrap.com/)
 
+**Demo link for the theme can be found [here](https://rahicodes.000webhostapp.com/)**
+
 ## For users:
 ### Activation: 
 This theme is not available on WordPress marketplace hence you will have to manually upload this theme to your website's directory.
