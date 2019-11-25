@@ -5,7 +5,7 @@ A fully responsive and highly customizable WordPress theme. This theme was devel
 
 - [For Developers](https://github.com/Tan-007/DesignFly#for-developers)
 - [For Users](https://github.com/Tan-007/DesignFly#for-users)
-- [Screenshot(s)](https://github.com/Tan-007/DesignFly#)
+- [Screenshot(s)](https://github.com/Tan-007/DesignFly#screenshots)
 
 ## For developers: 
 ### Here are the main directories/files:
