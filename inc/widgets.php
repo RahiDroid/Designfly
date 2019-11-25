@@ -14,8 +14,8 @@ class Designfly_Portfolio_Widget extends WP_Widget {
     public function __construct() {
 
         $widget_ops = array(
-            'classname' => 'designfly_portfolio_widget', // html class name
-            'description' => 'Custom DesignFly Portfolio Widget',
+            'classname'   => 'designfly_portfolio_widget', // html class name
+            'description' => esc_html__( 'Custom DesignFly Portfolio Widget', 'designfly' )
         );
 
         parent::__construct( 'designfly_portfolio', 'Designfly Portfolio', $widget_ops );
@@ -30,7 +30,7 @@ class Designfly_Portfolio_Widget extends WP_Widget {
         }
         ?>
         <p>
-            <label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label> 
+            <label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title' ); ?>:</label> 
             <input class="widget_portfolio_title" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
         </p>
         <?php

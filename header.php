@@ -67,7 +67,7 @@
 	</header><!-- #masthead -->
 		
 		<?php
-		if ( get_theme_mod( 'designfly-home-display-header' ) == 'Yes' ):
+		if ( get_theme_mod( 'designfly-home-display-header' ) === true ):
 			if ( is_front_page() && is_home() ) :
 			?>
 				<div id="intro-container">
@@ -112,7 +112,7 @@
 			
 		<!-- Bottom section of header -->
 
-		<?php if ( get_theme_mod( 'designfly-features-display' ) == 'Yes' ) : ?>
+		<?php if ( get_theme_mod( 'designfly-features-display' ) === true ) : ?>
 
 			<div class="container-fluid features-wrapper">
 				<div class="container features-container">
@@ -123,8 +123,8 @@
 								<img src=" <?php echo wp_get_attachment_url( get_theme_mod( 'designfly-features-image-1' ) ); ?> "/>
 							</div><!-- .thumbnail -->
 							<div class="content">
-								<p class="title"> <?php echo esc_html__( get_theme_mod( 'designfly-features-title-1' ) ); ?> </p>
-								<p class="description"> <?php echo esc_html__( get_theme_mod( 'designfly-features-para-1' ) ); ?> </p>
+								<p class="title"> <?php echo esc_html( get_theme_mod( 'designfly-features-title-1' ) ); ?> </p>
+								<p class="description"> <?php echo esc_html( get_theme_mod( 'designfly-features-para-1' ) ); ?> </p>
 							</div><!-- .content -->
 						</div><!-- .col-sm-4 -->
 
@@ -133,8 +133,8 @@
 								<img src=" <?php echo wp_get_attachment_url( get_theme_mod( 'designfly-features-image-2' ) ); ?> "/>
 							</div><!-- .thumbnail -->
 							<div class="content">
-								<p class="title"> <?php echo esc_html__( get_theme_mod( 'designfly-features-title-2' ) ); ?> </p>
-								<p class="description"> <?php echo esc_html__( get_theme_mod( 'designfly-features-para-2' ) ); ?> </p>
+								<p class="title"> <?php echo esc_html( get_theme_mod( 'designfly-features-title-2' ) ); ?> </p>
+								<p class="description"> <?php echo esc_html( get_theme_mod( 'designfly-features-para-2' ) ); ?> </p>
 							</div><!-- .content -->
 						</div><!-- .col-sm-4 -->
 						
@@ -143,8 +143,8 @@
 								<img src=" <?php echo wp_get_attachment_url( get_theme_mod( 'designfly-features-image-3' ) ); ?> "/>
 							</div><!-- .thumbnail -->
 							<div class="content">
-								<p class="title"> <?php echo esc_html__( get_theme_mod( 'designfly-features-title-3' ) ); ?> </p>
-								<p class="description"> <?php echo esc_html__( get_theme_mod( 'designfly-features-para-3' ) ); ?> </p>
+								<p class="title"> <?php echo esc_html( get_theme_mod( 'designfly-features-title-3' ) ); ?> </p>
+								<p class="description"> <?php echo esc_html( get_theme_mod( 'designfly-features-para-3' ) ); ?> </p>
 							</div><!-- .content -->
 						</div><!-- .col-sm-4 -->
 

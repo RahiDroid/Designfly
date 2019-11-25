@@ -25,19 +25,21 @@
 
 	$query = new WP_Query( $args );
 
-	if ( get_theme_mod( 'designfly-home-display-portfolio', 'Yes' ) == 'Yes' ):
-		if ( $query -> have_posts() ):
-		?>
-			<div id="portfolio-wrapper_home">
-		
-				<!-- top bar -->
+	if ( get_theme_mod( 'designfly-home-display-portfolio' ) === true ): ?>
+
+		<div id="portfolio-wrapper_home">
+	
+			<!-- top bar -->
 				<div class="portfolio-wrapper_home-top">
-					<p class="title"> <?php echo esc_html__( get_theme_mod( 'designfly-home-portfolio-title', 'd\'sign is the soul' ) ); ?> </p>
-					<a href=" <?php echo get_permalink( get_theme_mod( 'designfly-home-portfolio-btn', '#' ) ); ?>" id="portfolio-view-all">view all</a>
+					<p class="title"> <?php echo esc_html( get_theme_mod( 'designfly-home-portfolio-title', 'd\'sign is the soul' ) ); ?> </p>
+					<a href=" <?php echo get_permalink( get_theme_mod( 'designfly-home-portfolio-btn', '#' ) ); ?>" id="portfolio-view-all">
+						<?php esc_html_e( 'view all', 'designfly' ); ?>
+					</a>
 					<hr />
 				</div>
+		<?php
+		if ( $query -> have_posts() ):
 
-				<?php
 				while ( $query -> have_posts() ):
 					$query -> the_post();
 					get_template_part( 'template-parts/content', 'df-portfolio' );  
@@ -51,7 +53,8 @@
 		?>
 		<div class="container">
 			<p>
-				<?php _e( 'Sorry, no portfolio items found. Please add some portfolio items in admin-dashboard>Portfolio', 'textdomain' ); ?>
+				<?php esc_html_e( 'Sorry, no portfolio items found. Please add some portfolio items in admin-dashboard>Portfolio. 
+				If you don\'t want to see this message, uncheck \'Show recent portfolio items\' in admin-dashboard>Appearance>Customize>Home Page settings.', 'designfly' ); ?>
 			</p>
 		</div>
 	<?php 

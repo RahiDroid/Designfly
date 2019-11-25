@@ -40,9 +40,9 @@
 				</div>
 				
 				<div class="contact-us col-sm-6">
-					<p class="title">Contact Us</p>
+					<p class="title"><?php esc_html_e( 'Contact Us',  'designfly' ); ?></p>
 					<p class="address"> <?php echo get_theme_mod( 'designfly-footer-contact' ); ?> </p>
-					<span>Email: <p class="email">
+					<span><?php esc_html_e( 'Email', 'designfly' ); ?>: <p class="email">
 						<a href="mailto:<?php echo get_theme_mod( 'designfly-footer-email' ); ?>">
 							<?php echo get_theme_mod( 'designfly-footer-email' ); ?>
 						</a></p> </span>
@@ -87,7 +87,7 @@
 		if ( get_theme_mod( 'designfly-footer-display', 'Yes' ) == 'Yes' ) :
 		?>
 			<div class="site-info container">
-				<p> <?php echo esc_html__( get_theme_mod( 'designfly-footer-info' ) ); ?> | Designed by <a href="https://www.rtcamp.com">rtCamp</a>
+				<p> <?php echo esc_html__( get_theme_mod( 'designfly-footer-info' ) ); ?> | <?php esc_html_e( 'Designed by', 'designfly' ); ?><a href="https://www.rtcamp.com">rtCamp</a>
 				</p>
 			</div>
 		<?php

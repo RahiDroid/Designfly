@@ -65,12 +65,12 @@ add_action( 'customize_preview_init', 'designfly_customize_preview_js' );
 /* Home Page Settings */
 	// 'Home Page' display header section or not
 	$wp_customize -> add_setting( 'designfly-home-display-header', array(
-		'default' => 'Yes'
+		'default' => true,
 	) );
 
 	$wp_customize -> add_control( new WP_Customize_Control( $wp_customize, 'designfly-home-display-header-control',
 	array(
-		'label'    => 'Display header section',
+		'label'    => __( 'Display header section', 'designfly' ),
 		'section'  => 'static_front_page',
 		'settings' => 'designfly-home-display-header',
 		'type'     => 'checkbox',
@@ -79,12 +79,12 @@ add_action( 'customize_preview_init', 'designfly_customize_preview_js' );
 
 	// 'Home page' display recent portfolio
 	$wp_customize -> add_setting( 'designfly-home-display-portfolio', array(
-		'default' => 'Yes'
+		'default' => true,
 	) );
 
 	$wp_customize -> add_control( new WP_Customize_Control( $wp_customize, 'designfly-home-display-portfolio-control',
 	array(
-		'label'    => 'Display latest portfolio items',
+		'label'    => __( 'Display latest portfolio items', 'designfly' ),
 		'section'  => 'static_front_page',
 		'settings' => 'designfly-home-display-portfolio',
 		'type'     => 'checkbox',
@@ -98,7 +98,7 @@ add_action( 'customize_preview_init', 'designfly_customize_preview_js' );
 
 	$wp_customize -> add_control( new WP_Customize_Control( $wp_customize, 'designfly-home-portfolio-title-control',
 	array(
-		'label'    => 'Portfolio Section Title',
+		'label'    => __( 'Portfolio Section Title', 'designfly' ),
 		'section'  => 'static_front_page',
 		'settings' => 'designfly-home-portfolio-title',
 		'type'     => 'text',
@@ -112,7 +112,7 @@ add_action( 'customize_preview_init', 'designfly_customize_preview_js' );
 
 	$wp_customize -> add_control( new WP_Customize_Control( $wp_customize, 'designfly-hoome-portfolio-btn-control',
 	array(
-		'label'    => 'Portfolio \'View all\' button url',
+		'label'    => __( 'Portfolio \'View all\' button url', 'designfly' ),
 		'section'  => 'static_front_page',
 		'settings' => 'designfly-home-portfolio-btn',
 		'type'     => 'dropdown-pages', 
@@ -128,18 +128,18 @@ add_action( 'customize_preview_init', 'designfly_customize_preview_js' );
  */
 function register_footer_mods( $wp_customize ) {
 	$wp_customize -> add_section( 'designfly-footer-section', array(
-		'title' => 'Footer settings'
+		'title' => __( 'Footer settings', 'designfly' )
 	) );
 
 	// contact info
 	$wp_customize -> add_setting( 'designfly-footer-contact', array(
 		'capability' => 'edit_theme_options',
-		'default' => 'Street 21 Planet, A-11, california <br> Tel: 91234 42354'
+		'default'    => 'Street 21 Planet, A-11, california <br> Tel: 91234 42354'
 	) );
 
 	$wp_customize -> add_control( new WP_Customize_Control( $wp_customize, 'designfly-footer-contact-control',
 	array(
-		'label'    => 'Contact info(use \'<br>\' for new line)',
+		'label'    => __( 'Contact info(use \'<br>\' for new line)', 'designfly' ),
 		'section'  => 'designfly-footer-section',
 		'settings' => 'designfly-footer-contact',
 		'type'     => 'textarea',
@@ -153,7 +153,7 @@ function register_footer_mods( $wp_customize ) {
 
 	$wp_customize -> add_control( new WP_Customize_Control( $wp_customize, 'designfly-footer-email-control',
 	array(
-		'label'    => 'Contact email',
+		'label'    => __( 'Contact email', 'designfly' ),
 		'section'  => 'designfly-footer-section',
 		'settings' => 'designfly-footer-email',
 		'type'     => 'text',
@@ -168,7 +168,7 @@ function register_footer_mods( $wp_customize ) {
 
 	$wp_customize -> add_control( new WP_Customize_Control( $wp_customize, 'designfly-footer-info-control',
 	array(
-		'label'    => 'Site info text',
+		'label'    => __( 'Site info text', 'designfly' ),
 		'section'  => 'designfly-footer-section',
 		'settings' => 'designfly-footer-info',
 		'type'     => 'text',
@@ -182,7 +182,7 @@ function register_footer_mods( $wp_customize ) {
 
 	$wp_customize -> add_control( new WP_Customize_Control( $wp_customize, 'designfly-footer-urls-control',
 	array(
-		'label'    => 'Social site urls(separate urls with a semicolon(;))',
+		'label'    => __( 'Social site urls(separate urls with a semicolon(;))', 'designfly' ),
 		'section'  => 'designfly-footer-section',
 		'settings' => 'designfly-footer-urls',
 		'type'     => 'textarea',
@@ -197,18 +197,18 @@ function register_footer_mods( $wp_customize ) {
 
 function register_features_mods( $wp_customize ) {
 	$wp_customize -> add_section( 'designfly-features-section', array(
-		'title' => 'Services bar'
+		'title' => __( 'Services bar' 'designfly' )
 	) );
 
 	/* Features settings */
 	// 'Features' display or not
 	$wp_customize -> add_setting( 'designfly-features-display', array(
-		'default' => 'Yes'
+		'default' => true,
 	) );
 
 	$wp_customize -> add_control( new WP_Customize_Control( $wp_customize, 'designfly-features-display-control',
 	array(
-		'label'    => 'Display features?',
+		'label'    => __( 'Display features?', 'designfly' ),
 		'section'  => 'designfly-features-section',
 		'settings' => 'designfly-features-display',
 		'type'     => 'checkbox',
@@ -221,7 +221,7 @@ function register_features_mods( $wp_customize ) {
 
 	$wp_customize -> add_control( new WP_Customize_Control( $wp_customize, 'designfly-features-title-control-1',
 	array(
-		'label'    => 'Title-1',
+		'label'    => __( 'Title-1', 'designfly' ),
 		'section'  => 'designfly-features-section',
 		'settings' => 'designfly-features-title-1',
 	) ) );
@@ -233,7 +233,7 @@ function register_features_mods( $wp_customize ) {
 
 	$wp_customize -> add_control( new WP_Customize_Control( $wp_customize, 'designfly-features-para-control-1',
 	array(
-		'label'    => 'Description-1',
+		'label'    => __( 'Description-1', 'designfly' ),
 		'section'  => 'designfly-features-section',
 		'settings' => 'designfly-features-para-1',
 		'type'     => 'textarea',
@@ -244,7 +244,7 @@ function register_features_mods( $wp_customize ) {
 
 	$wp_customize -> add_control( new WP_Customize_Cropped_Image_Control( $wp_customize, 'designfly-features-image-control-1',
 	array(
-		'label'    => 'Image-1',
+		'label'    => __( 'Image-1', 'designfly' ),
 		'section'  => 'designfly-features-section',
 		'settings' => 'designfly-features-image-1',
 		'width'    => 50,
@@ -259,7 +259,7 @@ function register_features_mods( $wp_customize ) {
 
 	$wp_customize -> add_control( new WP_Customize_Control( $wp_customize, 'designfly-features-title-control-2',
 	array(
-		'label'    => 'Title-2',
+		'label'    => __( 'Title-2', 'designfly' ),
 		'section'  => 'designfly-features-section',
 		'settings' => 'designfly-features-title-2',
 	) ) );
@@ -271,7 +271,7 @@ function register_features_mods( $wp_customize ) {
 
 	$wp_customize -> add_control( new WP_Customize_Control( $wp_customize, 'designfly-features-para-control-2',
 	array(
-		'label'    => 'Description-2',
+		'label'    => __( 'Description-2', 'designfly' ),
 		'section'  => 'designfly-features-section',
 		'settings' => 'designfly-features-para-2',
 		'type'     => 'textarea',
@@ -282,7 +282,7 @@ function register_features_mods( $wp_customize ) {
 
 	$wp_customize -> add_control( new WP_Customize_Cropped_Image_Control( $wp_customize, 'designfly-features-image-control-2',
 	array(
-		'label'    => 'Image-2',
+		'label'    => __( 'Image-2', 'designfly' ),
 		'section'  => 'designfly-features-section',
 		'settings' => 'designfly-features-image-2',
 		'width'    => 50,
@@ -297,7 +297,7 @@ function register_features_mods( $wp_customize ) {
 
 	$wp_customize -> add_control( new WP_Customize_Control( $wp_customize, 'designfly-features-title-control-3',
 	array(
-		'label'    => 'Title-3',
+		'label'    => __( 'Title-3', 'designfly' ),
 		'section'  => 'designfly-features-section',
 		'settings' => 'designfly-features-title-3',
 	) ) );
@@ -309,7 +309,7 @@ function register_features_mods( $wp_customize ) {
 
 	$wp_customize -> add_control( new WP_Customize_Control( $wp_customize, 'designfly-features-para-control-3',
 	array(
-		'label'    => 'Description-3',
+		'label'    => __( 'Description-3', 'designfly' ),
 		'section'  => 'designfly-features-section',
 		'settings' => 'designfly-features-para-3',
 		'type'     => 'textarea',
@@ -320,7 +320,7 @@ function register_features_mods( $wp_customize ) {
 
 	$wp_customize -> add_control( new WP_Customize_Cropped_Image_Control( $wp_customize, 'designfly-features-image-control-3',
 	array(
-		'label'    => 'Image-3',
+		'label'    => __( 'Image-3', 'designfly' ),
 		'section'  => 'designfly-features-section',
 		'settings' => 'designfly-features-image-3',
 		'width'    => 50,

@@ -210,18 +210,18 @@ add_filter( 'nav_menu_css_class' , 'special_nav_class' , 10 , 2 );
 function designfly_custom_post_type() {
 	
 	$labels = array(
-			'name'           => 'Portfolio',
-			'singular_name'  => 'Portfolio',
-			'add_new'        => 'Add Item',
-			'all_items'      => 'All Items',
-			'add_new_item'   => 'Add Item',
-			'edit_item'      => 'Edit Item',
-			'new_item'       => 'New Item',
-			'view_item'      => 'View Item',
-			'search_item'    => 'Search Portfolio',
-			'not_found'      => 'No items found',
-		'not_found_in_trash' => 'No items found in trash',
-		'parent_item_colon'  => 'Parent Item',
+			'name'           => esc_html__( 'Portfolio', 'designfly' ),
+			'singular_name'  => esc_html__( 'Portfolio', 'designfly' ),
+			'add_new'        => esc_html__( 'Add Portfolio Item', 'designfly' ),
+			'all_items'      => esc_html__( 'All Portfolio Items', 'designfly' ),
+			'add_new_item'   => esc_html__( 'Add Portfolio item', 'designfly' ),
+			'edit_item'      => esc_html__( 'Edit Portfolio Item', 'designfly' ),
+			'new_item'       => esc_html__( 'New Portfolio Item', 'designfly' ),
+			'view_item'      => esc_html__( 'View Portfolio Item', 'designfly' ),
+			'search_item'    => esc_html__( 'Search Portfolio', 'designfly' ),
+			'not_found'      => esc_html__( 'No portfolio items found', 'designfly' ),
+		'not_found_in_trash' => esc_html__( 'No portfolio items found in trash', 'designfly' ),
+		'parent_item_colon'  => esc_html__( 'Parent Item', 'designfly' )
 	);
 	
 	$args = array(

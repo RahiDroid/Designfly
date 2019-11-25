@@ -36,7 +36,7 @@ $query = new WP_Query( array(
 
 		<!-- top bar -->
 		<div class="portfolio-wrapper-top">
-			<p class="title"> <?php echo esc_html__( get_theme_mod( 'designfly-home-portfolio-title', 'd\'sign is the soul' ) ); ?> </p>
+			<p class="title"> <?php echo esc_html( get_theme_mod( 'designfly-home-portfolio-title', 'd\'sign is the soul' ) ); ?> </p>
 			<hr />
 		</div>
 	
@@ -57,7 +57,7 @@ $query = new WP_Query( array(
 else:
     ?>
     <p>
-		<?php _e( 'Sorry, no portfolio items found.', 'textdomain' ); ?>
+		<?php _e( 'Sorry, no portfolio items found.', 'designfly' ); ?>
 	</p>
     <?php
 endif;

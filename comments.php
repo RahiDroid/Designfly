@@ -39,7 +39,7 @@ if ( post_password_required() ) {
 
 		
 		<hr class="bar">
-		<p class="post-comment">Post your comment</p>
+		<p class="post-comment"><?php esc_html_e( 'Post your comment', 'designfly' ); ?></p>
 
 		<?php
 		the_comments_navigation();
