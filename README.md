@@ -56,7 +56,18 @@ This theme is not available on WordPress marketplace hence you will have to manu
 > **Note:** *In future updates you can expect many more customizations like fonts, background image, theme primary and secondary colors, portfolio grid customizations, site icon and more. Stay tuned!*
 
 ## Screenshot(s):
+Home page:
+
 ![Home page](https://i.imgur.com/m1rwzHM.png)
+
+`Portfolio page` template in use:
+
 ![Portfolio page](https://i.imgur.com/W3hpQZW.png)
+
+`Blog page` template in use:
+
 ![blog page](https://i.imgur.com/AxtUXYm.png)
+
+This is how a single post will be displayed:
+
 ![Single post page](https://i.imgur.com/f3vMMFy.png)
