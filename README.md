@@ -21,7 +21,7 @@ A fully responsive and highly customizable WordPress theme. This theme was devel
 - `template-parts`: conains template parts used by the theme
 - `home.php`: Your home page template
 
-### Thir party plugins or libraries: 
+### Third party plugins or libraries: 
 The theme uses only one third party UI library called [Bootstrap](https://getbootstrap.com/)
 
 **Demo link for the theme can be found [here](https://rahicodes.000webhostapp.com/)**
