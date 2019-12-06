@@ -49,6 +49,7 @@ This theme is not available on WordPress marketplace hence you will have to manu
 - The Navigation bar's logo can be changed from `Appearance`>`Customize`>`Site Identity`
 - You can add all three of your services' title, description and image from `Appearance`>`Customize`>`Services Bar`
 - You can also choose to select if you want to display the header section and/or portfolio section on your homepage or not from `Appearance`>`Customize`>`Home Page Settings`
+- You get to decide to which page the `view all` button on home page's portfolio section points. You can select the desired page from a dropdown from `Appearance`>`Customize`>`Home page Settings`>`Portfolio 'view all' button url`.
 - You can add your footer section information like your adderess, email, phone and your social media links from `Appearance`>`Customize`>`Footer Settings`
 - Number of posts displayed in the blog page can be managed through `Settings`>`Reading`>`Blog pages show at most`
 - You are also provided with a widget to display your recent portfolio items in your site
