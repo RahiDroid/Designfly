@@ -197,7 +197,7 @@ function register_footer_mods( $wp_customize ) {
 
 function register_features_mods( $wp_customize ) {
 	$wp_customize -> add_section( 'designfly-features-section', array(
-		'title' => __( 'Services bar' 'designfly' )
+		'title' => __( 'Services bar', 'designfly' )
 	) );
 
 	/* Features settings */
